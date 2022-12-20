@@ -1,0 +1,32 @@
+*{
+    text-decoration: none;
+    color: #000;
+
+}
+
+.wraper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.film{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.btns{
+    margin: 10px 0;
+}
+
+.title{
+    font-weight: 700;
+}
+
+.btn{
+    margin: 5px 0;
+    width: min-content;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}

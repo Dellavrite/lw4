@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/reset-css/reset.css">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://localhost:8000/accounts/login" class="btn">Login</a>
+    <div class="wraper">
+        {% for i in films %}
+        <div class="film">
+            <div><span class="title">Название фильма:</span> {{ i.name }}</div>
+            <div><span class="title">Жинр:</span> {{ i.categorys.name }}</div>
+            <div><span class="title">Дата создания:</span> {{ i.date_post }}</div>
+            <div><span class="title">Актёры:</span> {{ i.actors }}</div>
+            <div><span class="title">Дата показа:</span> {{ i.date_view }}</div>
+            <div class="btns">
+                <a class="btn" href="http://localhost:8000/edit/{{ i.pk }}">Change</a>
+                <a class="btn" href="http://localhost:8000/delete/{{ i.pk }}">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
